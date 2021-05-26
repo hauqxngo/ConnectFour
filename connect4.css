@@ -13,9 +13,25 @@
   margin: 5px;
   width: 80%;
   height: 80%;
+  border-radius: 50%;
+  position: relative;
+  animation-name: fall;
+  animation-duration: 700ms;
+}
+
+@keyframes fall {
+  from {transform: translateY(-100%);}
+  to {transform: translateY(0);}
 }
 
 /* TODO: make pieces red/blue,  depending on player 1/2 piece */
+.piece.p1 {
+  background-color: #ffb6b9;
+}
+
+.piece.p2 {
+  background-color: #9fd8df;
+}
 
 /* column-top is table row of clickable areas for each column */
 
@@ -24,5 +40,17 @@
 }
 
 #column-top td:hover {
-  background-color: gold;
+  background-color: #fefdca;
 }
+
+h1 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #9fd8df;
+  border: 2px solid lightgray;
+  text-align: center;
+}
+
+p {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
