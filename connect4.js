@@ -5,8 +5,8 @@
  * board fills (tie)
  */
 
-const WIDTH = 7;
-const HEIGHT = 6;
+const WIDTH = 9;
+const HEIGHT = 8;
 
 let currPlayer = 1; // active player: 1 or 2
 let board = []; // array of rows, each row is array of cells  (board[y][x])
@@ -86,6 +86,12 @@ function endGame(msg) {
 /** handleClick: handle click of column top to play piece */
 
 function handleClick(evt) {
+
+  // check for game's already over
+  if (checkForWin()) {
+    return endGame(`Game is already over!`);
+  }
+
   // get x from ID of clicked cell
   const x = +evt.target.id;
 
