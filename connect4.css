@@ -41,6 +41,7 @@
 
 #column-top td:hover {
   background-color: #fefdca;
+  cursor: pointer;
 }
 
 h1 {
@@ -54,3 +55,9 @@ p {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+.center {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  text-align: center;
+}
